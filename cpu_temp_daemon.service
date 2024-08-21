@@ -1,0 +1,10 @@
+  [Unit]
+   Description=CPU Temperature Logging Daemon
+   After=network.target
+
+   [Service]
+   ExecStart=go run /home/me/daemon.go
+   Restart=on-failure
+
+   [Install]
+   WantedBy=default.target
